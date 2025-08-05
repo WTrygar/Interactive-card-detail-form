@@ -1,11 +1,22 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import type { Component } from 'vue'
+import CardFront from './components/CardFront.vue'
+
+interface Props {
+  CardFront?: Component
+  CardBack?: Component
+  InputForm?: Component
+}
+
+const props = defineProps<Props>()
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div class="min-h-lvh max-auto relative flex flex-col content-center">
+    <div class="bg-[url('/src/images/bg-main-mobile.png')] bg-no-repeat bg-cover h-180">
+      <CardFront />
+    </div>
+  </div>
 </template>
 
 <style scoped></style>
