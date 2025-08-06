@@ -2,6 +2,7 @@
 import type { Component } from 'vue'
 import CardBack from './components/CardBack.vue'
 import CardFront from './components/CardFront.vue'
+import InputForm from './components/InputForm.vue'
 
 interface Props {
   CardFront?: Component
@@ -18,6 +19,7 @@ const props = defineProps<Props>()
       <CardFront />
       <CardBack />
     </div>
+    <InputForm />
   </div>
 </template>
 
