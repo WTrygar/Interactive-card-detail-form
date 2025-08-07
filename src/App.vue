@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import type { Component } from 'vue'
-import CardBack from './components/CardBack.vue'
 import CardFront from './components/CardFront.vue'
 import InputForm from './components/InputForm.vue'
 
@@ -15,9 +14,8 @@ const props = defineProps<Props>()
 
 <template>
   <div class="min-h-lvh max-auto relative flex flex-col content-center">
-    <div class="bg-[url('/src/images/bg-main-mobile.png')] bg-no-repeat bg-cover h-180">
+    <div class="bg-[url('/src/images/bg-main-mobile.png')] bg-no-repeat bg-cover h-70 mb-30">
       <CardFront />
-      <CardBack />
     </div>
     <InputForm />
   </div>
