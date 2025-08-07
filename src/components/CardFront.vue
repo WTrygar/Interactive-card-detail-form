@@ -5,14 +5,18 @@
     <div class="flex flex-col justify-between w-full m-4 mb-14">
       <div class="bg-[url('/src/images/card-logo.svg')] ml-1 h-1/2 bg-no-repeat"></div>
       <div class="flex flex-col justify-between h-1/2">
-        <div class="text-center text-2xl pt-4 tracking-[.13em]">0000 0000 0000 0000</div>
+        <div class="text-center text-2xl pt-4 tracking-[.13em]">{{ store.cardNumber }}</div>
         <div class="flex flex-row justify-between text-sm px-1">
-          <div>JANE APPLESEED</div>
-          <div>00/00</div>
+          <div>{{ store.name.toUpperCase() }}</div>
+          <div>{{ store.month }}/{{ store.year }}</div>
         </div>
       </div>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { useCardStore } from '@/stores/counter'
+
+const store = useCardStore()
+</script>

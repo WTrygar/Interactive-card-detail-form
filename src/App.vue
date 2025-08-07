@@ -3,6 +3,9 @@ import type { Component } from 'vue'
 import CardBack from './components/CardBack.vue'
 import CardFront from './components/CardFront.vue'
 import InputForm from './components/InputForm.vue'
+import { useCardStore } from './stores/counter'
+
+const store = useCardStore()
 
 interface Props {
   CardFront?: Component

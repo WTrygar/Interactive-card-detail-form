@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { useCardStore } from '@/stores/counter'
+
+const store = useCardStore()
+</script>
+
 <template>
   <div
     class="font-grotesk font-medium tracking-[.1em] flex flex-col items-center justify-between lg:justify-center md:px-35 lg:px-40"
@@ -8,6 +14,7 @@
         class="p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
       >
         <input
+          v-model="store.name"
           class="p-3 w-full bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
           type="text"
           id="name"
@@ -21,6 +28,7 @@
         class="p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
       >
         <input
+          v-model="store.cardNumber"
           class="p-3 w-full bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
           type="text"
           id="name"
@@ -36,10 +44,11 @@
             class="w-1/2 p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
           >
             <input
+              v-model="store.month"
               class="w-full p-3 bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
               type="number"
-              name="year"
-              id="year"
+              name="month"
+              id="month"
               placeholder="MM"
             />
           </div>
@@ -47,6 +56,7 @@
             class="w-1/2 p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
           >
             <input
+              v-model="store.year"
               class="w-full p-3 bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
               type="number"
               name="year"
@@ -62,6 +72,7 @@
           class="p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
         >
           <input
+          v-model="store.cvc"
             class="p-3 w-full bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
             type="text"
             id="name"
@@ -73,5 +84,3 @@
     <button class="w-9/10 bg-black rounded-md text-white h-14 mt-4 mb-10">Confirm</button>
   </div>
 </template>
-
-<script setup lang="ts"></script>
