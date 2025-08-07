@@ -1,5 +1,7 @@
 <template>
-  <div class="font-grotesk font-medium tracking-[.1em] flex flex-col items-center justify-between">
+  <div
+    class="font-grotesk font-medium tracking-[.1em] flex flex-col items-center justify-between lg:justify-center md:px-35 lg:px-40"
+  >
     <div class="w-9/10 my-4">
       <label for="name" class="">CARDHOLDER NAME</label>
       <div
@@ -28,7 +30,7 @@
     </div>
     <div class="flex flex-row w-9/10 my-2 gap-8">
       <div class="flex flex-col w-1/2">
-        <label for="exp-date" class="">EXP. DATE (MM/YY)</label>
+        <label for="exp-date" class="tracking-[.08em]">EXP. DATE (MM/YY)</label>
         <div class="flex flex-row gap-4">
           <div
             class="w-1/2 p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
