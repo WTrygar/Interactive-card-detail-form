@@ -32,7 +32,9 @@ const store = useCardStore()
           class="p-3 w-full bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
           type="text"
           id="name"
+          maxlength="16"
           placeholder="e.g. 1234 5678 9123 0000"
+          pattern="[0-9.]+"
         />
       </div>
     </div>
@@ -46,9 +48,10 @@ const store = useCardStore()
             <input
               v-model="store.month"
               class="w-full p-3 bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
-              type="number"
+              type="text"
               name="month"
               id="month"
+              maxlength="2"
               placeholder="MM"
             />
           </div>
@@ -58,9 +61,10 @@ const store = useCardStore()
             <input
               v-model="store.year"
               class="w-full p-3 bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
-              type="number"
+              type="text"
               name="year"
               id="year"
+              maxlength="2"
               placeholder="YY"
             />
           </div>
@@ -72,10 +76,11 @@ const store = useCardStore()
           class="p-0.5 mt-2 rounded-md bg-gray-300 hover:bg-gradient-to-r from-indigo-500 to-purple-900"
         >
           <input
-          v-model="store.cvc"
+            v-model="store.cvc"
             class="p-3 w-full bg-white placeholder:text-gray-300 rounded-md focus:outline-none"
             type="text"
             id="name"
+            maxlength="3"
             placeholder="e.g. 123"
           />
         </div>
